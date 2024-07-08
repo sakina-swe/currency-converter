@@ -20,14 +20,6 @@ class Currency
         return $exchange;
     }
 
-//    public function enhance_exchange_rates($rates)
-//    {
-//        $rates[] = ["Ccy" => "UZS", "Rate" => 1];
-//        return $rates;
-//    }
-
-
-
     public function getCurrencyInfo()
     {
         $currencyInfo = file_get_contents(self::CB_URL);
@@ -48,7 +40,3 @@ class Currency
     }
 }
 $currency = new Currency();
-//$exchangeRates = enhance_exchange_rates($exchangeRates);
-//print_r($currency->getCurrencyInfo());
-//
-//print_r($currency->customCurrencies());
